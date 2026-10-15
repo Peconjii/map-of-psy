@@ -299,3 +299,8 @@ body { background: var(--bg); color: var(--fg); font-family: var(--body); overfl
 .facts__links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font: 12px var(--mono); }
 .facts__links a { color: var(--fam); text-decoration: none; }
 .facts__links a:hover { text-decoration: underline; }
+
+/* Title + subtitle */
+.brand { display: grid; gap: 2px; }
+.brand h1 { line-height: 1; }
+.brand__sub { margin: 0; font: 11px var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }

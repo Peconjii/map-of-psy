@@ -84,7 +84,7 @@ export default function App() {
     const url = q.size ? `?${q}` : window.location.pathname;
     window.history.replaceState(null, '', url);
     const name = artist ?? (festival ? festivalById[festival].name : null) ?? label ?? (selectedId ? genreById[selectedId].name : null);
-    document.title = name ? `${name} · Map of Psy` : 'Map of Psy';
+    document.title = name ? `${name} · Map of Psy` : 'Map of Psy · interactive galaxy of psytrance';
   }, [selectedId, artist, festival, label]);
 
   const clearFocus = () => {
@@ -175,7 +175,10 @@ export default function App() {
         showLabels={showLabels} onSelectLabel={openLabel} />
 
       <header className="topbar">
-        <h1>MAP OF PSY</h1>
+        <div className="brand">
+          <h1>MAP OF PSY</h1>
+          <p className="brand__sub">interactive galaxy of psytrance</p>
+        </div>
         <div className="legend">
           {Object.entries(data.families).map(([id, f]) => (
             <span key={id}><i style={{ background: f.color }} />{f.name}</span>
