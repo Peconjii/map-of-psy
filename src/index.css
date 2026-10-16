@@ -304,3 +304,44 @@ body { background: var(--bg); color: var(--fg); font-family: var(--body); overfl
 .brand { display: grid; gap: 2px; }
 .brand h1 { line-height: 1; }
 .brand__sub { margin: 0; font: 11px var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+
+/* Readable top bar over the map */
+.topbar { z-index: 5; }
+.topbar::before { content: ''; position: absolute; inset: -16px -20px -56px; z-index: -1; background: linear-gradient(180deg, rgba(5,4,13,0.95), rgba(5,4,13,0.8) 60%, transparent); pointer-events: none; }
+
+/* Desktop: the menu wrapper is invisible and the menu toggle hidden */
+.topbar__menu { display: contents; }
+.menu-toggle, .hud__fold { display: none; }
+
+/* Compact header with a menu on phones, tablets and short landscape screens */
+@media (max-width: 1100px), (max-height: 500px) {
+  .topbar { top: 10px; left: 12px; right: 12px; gap: 8px; align-items: center; flex-wrap: nowrap; }
+  .topbar h1 { font-size: 22px; }
+  .brand__sub { font-size: 9px; letter-spacing: 0.12em; }
+  .menu-toggle { display: block; margin-left: auto; pointer-events: auto; padding: 8px 12px; font: 600 13px var(--mono); color: var(--fg); background: var(--hud); border: 1px solid var(--accent); cursor: pointer; }
+  /* The menu becomes a sheet under the title bar */
+  .topbar__menu { display: none; }
+  .topbar__menu.is-open { display: flex; flex-direction: column-reverse; gap: 14px; position: fixed; top: 62px; left: 12px; right: 12px; max-height: calc(100% - 150px); overflow: auto; z-index: 20; padding: 14px; pointer-events: auto; background: rgba(14, 12, 32, 0.97); border: 1px solid var(--line); }
+  .topbar__menu .legend { display: flex; flex: none; font-size: 12px; gap: 8px 14px; }
+  .topbar__menu .topbar__tools { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; width: 100%; margin: 0; }
+  .topbar__menu .topbar__tools .search { grid-column: 1 / -1; order: -1; width: 100%; }
+  .topbar__menu .tools__btn, .topbar__menu .tours__toggle { width: 100%; padding: 11px 12px; text-align: left; }
+  .topbar__menu .tours { width: 100%; }
+  .topbar__menu .tours__list, .topbar__menu .search__hits { position: static; width: 100%; margin-top: 6px; }
+  .is-touring .legend { display: flex; }
+  .topbar__menu.is-open { left: auto; width: min(420px, calc(100% - 24px)); }
+}
+
+@media (max-width: 700px) {
+  .topbar__menu.is-open { left: 12px; width: auto; }
+
+  /* HUD as a foldable bottom sheet */
+  .hud { left: 12px; right: 12px; width: auto; bottom: 74px; max-height: 48%; padding-top: 38px; }
+  .hud__fold { display: block; position: absolute; top: 8px; left: 14px; padding: 3px 10px; font: 11px var(--mono); color: var(--muted); background: rgba(255,255,255,0.05); border: 1px solid var(--line); cursor: pointer; }
+  .hud__close { top: 6px; }
+  .hud.is-folded { max-height: 40px; overflow: hidden; padding-bottom: 0; }
+  .hud.is-folded > :not(.hud__fold) { visibility: hidden; }
+  .timeline { left: 12px; right: 12px; width: auto; transform: none; bottom: 12px; padding: 8px 12px; }
+  .player { top: 62px; left: 12px; right: 12px; }
+  .is-touring .player { top: 62px; }
+}

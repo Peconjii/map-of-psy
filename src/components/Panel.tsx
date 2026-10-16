@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type CSSProperties, type ReactNode } from 'react';
 import { ProducerCorner } from './ProducerCorner';
 import { HeartButton } from './Playlist';
 import type { PlaylistApi } from '../hooks/usePlaylist';
@@ -23,6 +23,19 @@ interface Props {
   onSelect: (id: string) => void;
   onSelectArtist: (name: string | null) => void;
   onClose: () => void;
+}
+
+/** HUD container; on phones it is a bottom sheet that can be folded down to its header */
+function HudShell({ className, style, children }: { className: string; style?: CSSProperties; children: ReactNode }) {
+  const [folded, setFolded] = useState(false);
+  return (
+    <aside className={folded ? `${className} is-folded` : className} style={style}>
+      <button className="hud__fold" onClick={() => setFolded((f) => !f)} aria-expanded={!folded}>
+        {folded ? '▴ Show info' : '▾ Hide'}
+      </button>
+      {children}
+    </aside>
+  );
 }
 
 /** Copies the current address (kept in sync by App) so the view can be shared */
@@ -96,7 +109,7 @@ export function Panel({
     const f = festivalById[festival];
     const seen = artistsAtFestival(f.id);
     return (
-      <aside className="hud">
+      <HudShell className="hud">
         <button className="hud__close" onClick={onClose} aria-label="Close">×</button>
         <div className="hud__tag">// STATION · FESTIVAL</div>
         <h2>{f.name}</h2>
@@ -121,7 +134,7 @@ export function Panel({
           <a className="hud__ext" href={youtube(`${f.name} full set`)} target="_blank" rel="noopener noreferrer">Sets on YouTube ↗</a>
           <ShareButton />
         </div>
-      </aside>
+      </HudShell>
     );
   }
 
@@ -129,7 +142,7 @@ export function Panel({
     const gs = genresOfLabel(label);
     const lp = labels[label];
     return (
-      <aside className="hud">
+      <HudShell className="hud">
         <button className="hud__close" onClick={onClose} aria-label="Close">×</button>
         <div className="hud__tag">// CONSTELLATION · LABEL</div>
         <h2>{label}</h2>
@@ -156,16 +169,16 @@ export function Panel({
           <a className="hud__ext" href={youtube(label)} target="_blank" rel="noopener noreferrer">Search on YouTube ↗</a>
           <ShareButton />
         </div>
-      </aside>
+      </HudShell>
     );
   }
 
   if (!genreId) {
     return (
-      <aside className="hud hud--idle">
+      <HudShell className="hud hud--idle">
         <div className="hud__tag">// NAVIGATION</div>
         <p>Pick a star system to open its genre data, or search for it above. Drag to move, scroll to zoom. Zoom in close to see artists orbiting each star. Click a ◇ station for a festival or a ⬡ marker for a record label; you can switch festivals and labels on or off in the legend at the top. Tracks marked ▶ play in the player while you explore; ♡ saves them to your playlist.</p>
-      </aside>
+      </HudShell>
     );
   }
 
@@ -179,7 +192,7 @@ export function Panel({
     const artistLabels = labelsOfArtist(artist);
     const src = sources[artist];
     return (
-      <aside className="hud" style={{ ['--fam' as string]: fam.color }}>
+      <HudShell className="hud" style={{ ['--fam' as string]: fam.color }}>
         <button className="hud__close" onClick={onClose} aria-label="Close">×</button>
         <button className="hud__back" onClick={() => onSelectArtist(null)}>← {g.name}</button>
         <div className="hud__tag">// SATELLITE · ARTIST</div>
@@ -273,7 +286,7 @@ export function Panel({
           <a className="hud__ext" href={youtube(artist)} target="_blank" rel="noopener noreferrer">Search on YouTube ↗</a>
           <ShareButton />
         </div>
-      </aside>
+      </HudShell>
     );
   }
 
@@ -282,7 +295,7 @@ export function Panel({
   const to = data.links.filter(([a]) => a === g.id).map(([, b]) => b);
 
   return (
-    <aside className="hud" style={{ ['--fam' as string]: fam.color }}>
+    <HudShell className="hud" style={{ ['--fam' as string]: fam.color }}>
       <button className="hud__close" onClick={onClose} aria-label="Close">×</button>
       <div className="hud__tag">// SYSTEM · {fam.name.toUpperCase()}</div>
       <h2>{g.name}</h2>
@@ -330,6 +343,6 @@ export function Panel({
       <div className="hud__label">Influenced</div>
       {chips(to)}
       <div className="hud__footer"><ShareButton /></div>
-    </aside>
+    </HudShell>
   );
 }

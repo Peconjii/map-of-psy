@@ -48,6 +48,7 @@ export default function App() {
   const [hidden, setHidden] = useState(false);
   const playlist = usePlaylist();
   const [timeTravel, setTimeTravel] = useState(false);
+  const [menu, setMenu] = useState(false);
 
   // Time machine: plays history forward one year at a time, lighting stars as their genre appears
   useEffect(() => {
@@ -179,6 +180,12 @@ export default function App() {
           <h1>MAP OF PSY</h1>
           <p className="brand__sub">interactive galaxy of psytrance</p>
         </div>
+        <button className="menu-toggle" onClick={() => setMenu((m) => !m)} aria-expanded={menu} aria-controls="topbar-menu">
+          {menu ? '✕ Close' : '☰ Menu'}
+        </button>
+        <div id="topbar-menu" className={menu ? 'topbar__menu is-open' : 'topbar__menu'}
+          // On phones the menu closes as soon as something is picked inside a list
+          onClick={(e) => { if ((e.target as HTMLElement).closest('.tours__list li button, .search__hits button, [data-closes-menu]')) setMenu(false); }}>
         <div className="legend">
           {Object.entries(data.families).map(([id, f]) => (
             <span key={id}><i style={{ background: f.color }} />{f.name}</span>
@@ -191,10 +198,12 @@ export default function App() {
         <div className="topbar__tools">
           <ToursMenu onStart={(t) => goToStop(t, 0)} />
           <LabelsMenu onOpen={openLabel} />
-          <button className="tools__btn" onClick={startQuiz}>Quiz</button>
-          <button className="tools__btn" onClick={surprise} title="Surprise me: random system and track" aria-label="Surprise me">🎲 Surprise</button>
+          <button className="tools__btn" onClick={startQuiz} data-closes-menu>Quiz</button>
+          <button className="tools__btn" onClick={surprise} data-closes-menu title="Surprise me: random system and track" aria-label="Surprise me">🎲 Surprise</button>
           <PlaylistMenu playlist={playlist} playing={hidden ? null : playing} onPlay={(t) => play(t, false, playlist.items)} />
-          <Search onSelect={reveal} onOpenLabel={openLabel} onOpenFestival={openFestival} />
+          <Search onSelect={(id, name) => { setMenu(false); reveal(id, name); }}
+            onOpenLabel={(l) => { setMenu(false); openLabel(l); }} onOpenFestival={(id) => { setMenu(false); openFestival(id); }} />
+        </div>
         </div>
       </header>
 
