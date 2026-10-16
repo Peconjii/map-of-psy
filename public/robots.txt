@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://map-of-psy.vercel.app/sitemap.xml

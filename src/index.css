@@ -347,3 +347,13 @@ body { background: var(--bg); color: var(--fg); font-family: var(--body); overfl
   .player { top: 62px; left: 12px; right: 12px; }
   .is-touring .player { top: 62px; }
 }
+
+/* Text for search engines, shown as a splash until React replaces it */
+.seo-intro {
+  height: 100%; overflow: hidden; padding: 12vh 24px 0; max-width: 720px; margin: 0 auto;
+  color: var(--muted); font-size: 14px; line-height: 1.6;
+}
+.seo-intro h1 { margin: 0; font-family: var(--display); font-weight: 800; letter-spacing: 0.08em; color: var(--fg); font-size: clamp(22px, 3vw, 34px); }
+.seo-intro .seo-lead { color: var(--fg); margin-top: 4px; }
+.seo-intro h2, .seo-intro h3 { font-size: 14px; color: var(--fg); margin: 16px 0 4px; }
+.seo-intro ul { display: flex; flex-wrap: wrap; gap: 0 12px; list-style: none; margin: 0; padding: 0; }
