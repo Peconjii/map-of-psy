@@ -781,7 +781,7 @@
       "psytrance"
     ],
     "check": {
-      "brazil": "confirmed"
+      "fullon": "related"
     },
     "suggest": []
   },
@@ -807,7 +807,7 @@
       "goa"
     ],
     "check": {
-      "brazil": "related"
+      "fullon": "related"
     },
     "suggest": []
   },
@@ -1092,7 +1092,8 @@
       "progressive psytrance"
     ],
     "check": {
-      "prog": "confirmed"
+      "prog": "confirmed",
+      "offbeat": "related"
     },
     "suggest": []
   },
@@ -1140,7 +1141,8 @@
       "progressive trance"
     ],
     "check": {
-      "prog": "confirmed"
+      "prog": "confirmed",
+      "offbeat": "related"
     },
     "suggest": []
   },
@@ -1565,7 +1567,7 @@
       "psychedelic trance"
     ],
     "check": {
-      "forest": "related"
+      "night": "related"
     },
     "suggest": []
   },

@@ -222,5 +222,13 @@
     "sounds": "Psy FX and acid lines with funk/breaks groove",
     "tip": "Chop a classic break (Amen, Think) and lock its groove to your bassline.",
     "plugins": "FL Slicex, Serum, 303 emulations"
+  },
+  "offbeat": {
+    "tempo": "136–140 BPM",
+    "groove": "Strict offbeat bass: kick on the beat, one short bass note on the 'and', with heavy sidechain",
+    "structure": "Intro 32 → groove 64 → melodic breakdown 32 → drop 64 → outro 32",
+    "sounds": "Punchy kick, offbeat bass, plucky arpeggios, a clear lead melody in the breakdown",
+    "tip": "Keep the bass note short and tuned to the kick so the two never overlap.",
+    "plugins": "Serum or Sylenth1 for the bass and leads, a ducking plugin for the sidechain"
   }
 }

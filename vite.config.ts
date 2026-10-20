@@ -33,7 +33,7 @@ function seo(siteUrl: string): Plugin {
         isAccessibleForFree: true,
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         description:
-          'Interactive map of psytrance: 34 genres from Goa trance to psycore as a star galaxy, with artists, key tracks, festivals, record labels, guided tours and a guess-the-genre quiz.',
+          `Interactive map of psytrance: ${genres.length} genres from Goa trance to psycore as a star galaxy, with artists, key tracks, festivals, record labels, guided tours and a guess-the-genre quiz.`,
         about: names.map((name) => ({ '@type': 'Thing', name })),
       },
     ],

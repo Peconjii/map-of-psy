@@ -96,8 +96,8 @@
     "name": "Hadra Trance Festival",
     "country": "France",
     "description": "Run by the French Hadra collective, known for a broad psy line-up from goa to darker sounds.",
-    "x": 1150,
-    "y": 1230,
+    "x": 1080,
+    "y": 1210,
     "genres": [
       "goa",
       "prog",
@@ -123,8 +123,8 @@
     "name": "Origin Festival",
     "country": "South Africa",
     "description": "One of the major South African psytrance festivals.",
-    "x": 2010,
-    "y": 770,
+    "x": 1995,
+    "y": 800,
     "genres": [
       "sapsy",
       "forest",
@@ -150,8 +150,8 @@
     "name": "MoDem (Momento Demento)",
     "country": "Croatia",
     "description": "Underground festival on the Mrežnica river in Primišlje, central Croatia, with The Hive as its main stage for high-energy psytrance from twilight to darkpsy and hi-tech.",
-    "x": 1430,
-    "y": 1345,
+    "x": 1490,
+    "y": 1330,
     "genres": [
       "twilight",
       "dark",
@@ -207,7 +207,7 @@
     "name": "Free Earth Festival",
     "country": "Greece",
     "description": "Beach festival on the Halkidiki peninsula, covering goa, full-on, dark and forest psytrance.",
-    "x": 1320,
+    "x": 1220,
     "y": 1150,
     "genres": [
       "goa",

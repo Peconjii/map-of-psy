@@ -347,7 +347,9 @@
         "Domestic",
         "Space Cat",
         "Hypnoise",
-        "Freedom Fighters"
+        "Freedom Fighters",
+        "Burn In Noise",
+        "Wrecked Machines"
       ],
       "production": {
         "bass": "Classic rolling bass: kick plus three bass notes in between",
@@ -444,6 +446,11 @@
           "title": "Storm",
           "year": 2017,
           "youtube": "cr0VGkeiWYM"
+        },
+        {
+          "artist": "Wrecked Machines Vs Pixel",
+          "title": "Sem Parar",
+          "youtube": "2cSIEVNngXM"
         }
       ]
     },
@@ -553,7 +560,8 @@
         "Dickster",
         "Tristan",
         "Cosinus",
-        "Rezonant"
+        "Rezonant",
+        "Fungus Funk"
       ],
       "production": {
         "bass": "Rolling bass with more distortion",
@@ -610,6 +618,23 @@
           "artist": "Rezonant",
           "title": "Johny on the Run",
           "youtube": "aXLlsRcrMAg"
+        },
+        {
+          "artist": "Dickster, Burn In Noise & Logica",
+          "title": "Scarabian Nights",
+          "year": 2013,
+          "youtube": "Xdb--Z9NIOA"
+        },
+        {
+          "artist": "Tristan, Burn In Noise, Avalon, Altruism",
+          "title": "The God Molecule",
+          "youtube": "4Y5pNVUQUzs"
+        },
+        {
+          "artist": "Fungus Funk",
+          "title": "India",
+          "youtube": "KXummEHngc0",
+          "famous": true
         }
       ]
     },
@@ -628,9 +653,7 @@
       "description": "Brazil became one of the biggest psy scenes; the sound is modern, clean and built for big festival moments.",
       "artists": [
         "Vegas",
-        "Burn In Noise",
-        "Mandragora",
-        "Wrecked Machines"
+        "Mandragora"
       ],
       "production": {
         "bass": "Dense, loud rolling bass",
@@ -658,25 +681,9 @@
           "youtube": "DBUoZuAiH5M"
         },
         {
-          "artist": "Dickster, Burn In Noise & Logica",
-          "title": "Scarabian Nights",
-          "year": 2013,
-          "youtube": "Xdb--Z9NIOA"
-        },
-        {
           "artist": "Vegas",
           "title": "Butterfly",
           "youtube": "NROqm4y5oY4"
-        },
-        {
-          "artist": "Tristan, Burn In Noise, Avalon, Altruism",
-          "title": "The God Molecule",
-          "youtube": "4Y5pNVUQUzs"
-        },
-        {
-          "artist": "Wrecked Machines Vs Pixel",
-          "title": "Sem Parar",
-          "youtube": "2cSIEVNngXM"
         },
         {
           "artist": "Vegas",
@@ -913,18 +920,6 @@
           "famous": true
         },
         {
-          "artist": "Phaxe & Morten Granau",
-          "title": "The Collective",
-          "year": 2014,
-          "youtube": "cd4vsOOD9Ck",
-          "famous": true
-        },
-        {
-          "artist": "Phaxe & Morten Granau",
-          "title": "Lost",
-          "youtube": "Lua1Y5Iy6Bc"
-        },
-        {
           "artist": "Neelix, Caroline Harrison",
           "title": "There Was A Time",
           "year": 2021,
@@ -955,6 +950,54 @@
           "title": "Source Code",
           "year": 2011,
           "youtube": "dSapDLR53OY"
+        }
+      ]
+    },
+    {
+      "id": "offbeat",
+      "name": "Offbeat prog",
+      "family": "prog",
+      "year": 2012,
+      "bpm": [
+        136,
+        140
+      ],
+      "size": 0.8,
+      "x": 2140,
+      "y": 760,
+      "description": "Melodic progressive built on the offbeat bass: the bass hits between the kicks for a bouncy, driving pulse. Big in Hamburg and across German and Danish clubs.",
+      "artists": [
+        "Phaxe",
+        "Morten Granau",
+        "Ghost Rider",
+        "Day.Din"
+      ],
+      "production": {
+        "bass": "Offbeat bass: one short note between every two kicks",
+        "kick": "Punchy, round progressive kick",
+        "atmosphere": "Melodic leads and uplifting breakdowns, cleaner and brighter than dark prog"
+      },
+      "labels": [
+        "Iboga Records",
+        "Spin Twist Records"
+      ],
+      "countries": [
+        "Germany",
+        "Denmark"
+      ],
+      "festivals": [],
+      "tracks": [
+        {
+          "artist": "Phaxe & Morten Granau",
+          "title": "The Collective",
+          "year": 2014,
+          "youtube": "cd4vsOOD9Ck",
+          "famous": true
+        },
+        {
+          "artist": "Phaxe & Morten Granau",
+          "title": "Lost",
+          "youtube": "Lua1Y5Iy6Bc"
         }
       ]
     },
@@ -1083,8 +1126,8 @@
         150
       ],
       "size": 0.8,
-      "x": 1550,
-      "y": 1250,
+      "x": 1590,
+      "y": 980,
       "description": "Between full-on and dark: a dark atmosphere, but with groove and melodies.",
       "artists": [
         "Hux Flux",
@@ -1161,8 +1204,8 @@
         160
       ],
       "size": 1.2,
-      "x": 1300,
-      "y": 1450,
+      "x": 1270,
+      "y": 1500,
       "description": "The Russian and German scenes: horror samples, distortion, an abstract sound without classic melodies.",
       "artists": [
         "Xenomorph",
@@ -1329,12 +1372,11 @@
         155
       ],
       "size": 1,
-      "x": 1050,
-      "y": 1600,
+      "x": 1330,
+      "y": 1250,
       "description": "Organic forest sounds and a dark but natural atmosphere. A frequent point of debate with dark psy.",
       "artists": [
         "Derango",
-        "Fungus Funk",
         "Megalopsy",
         "Kalilaskov AS",
         "Onkel Dunkel",
@@ -1367,12 +1409,6 @@
           "title": "Clairvoyage",
           "year": 2005,
           "youtube": "bQR5ycMNLIY"
-        },
-        {
-          "artist": "Fungus Funk",
-          "title": "India",
-          "youtube": "KXummEHngc0",
-          "famous": true
         },
         {
           "artist": "Megalopsy",
@@ -2796,6 +2832,10 @@
       "dark"
     ],
     [
+      "night",
+      "twilight"
+    ],
+    [
       "prog",
       "zenon"
     ],
@@ -2926,6 +2966,10 @@
     [
       "frankfurt",
       "goa"
+    ],
+    [
+      "prog",
+      "offbeat"
     ]
   ]
 }

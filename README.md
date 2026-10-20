@@ -7,13 +7,13 @@ and almost every star comes with key tracks you can play while you explore.
 
 **Live site: [map-of-psy.vercel.app](https://map-of-psy.vercel.app)**
 
-![The whole map: 34 genres, festivals and labels](docs/screenshots/overview.png)
+![The whole map: 35 genres, festivals and labels](docs/screenshots/overview.png)
 
 ![A genre system with its HUD, key tracks and the player](docs/screenshots/genre.png)
 
 ## Features
 
-- **Star map.** 34 genres in five scenes (Roots, Goa / Full-on, Progressive, Dark / Forest / Hi-tech, Chill / Downtempo),
+- **Star map.** 35 genres in five scenes (Roots, Goa / Full-on, Progressive, Dark / Forest / Hi-tech, Chill / Downtempo),
   connected by routes that show which genre grew out of which. Stars pulse at the tempo of their genre. Drag to move,
   scroll or pinch to zoom; up close, the artists of each genre orbit the star as satellites.
 - **Genre HUD.** Description, how it sounds (bass, kick, atmosphere), key tracks with year, artists, labels, scene,
